@@ -34,9 +34,9 @@ class _ProductInfoPageState extends State<ProductInfoPage> {
     String response = responseTest.body;
 
     if (response.contains('noresult')) {
-      // setState(() {
-      //   imgWidget = const SizedBox();
-      // });
+      setState(() {
+        productName = "등록되지 않은 바코드 입니다 오른쪽 방향으로 스와이프 하시면 홈 화면으로 돌아갑니다";
+      });
       tts.speak('등록되지 않은 바코드 입니다 오른쪽 방향으로 스와이프 하시면 홈 화면으로 돌아갑니다');
     } else {
       var result = response.split('\n');
